@@ -22,16 +22,16 @@ def account():
         result += "你的老師關鍵字為:：" +cond1
 
 
-        #db = firestore.client()
-        #collection_ref = db.collection("111")
-        #docs = collection_ref.get()
-        #result = ""
-        #for doc in docs:
-            #dict = doc.to_dict()
+        db = firestore.client()
+        collection_ref = db.collection("111")
+        docs = collection_ref.get()
+        result = ""
+        for doc in docs:
+            dict = doc.to_dict()
            # if cond in dict["Course"] and cond1 in dict["Leacture"]:
                 #print("{}老師開的{}課程,每週{}於{}上課".format(dict["Leacture"], dict["Course"],  dict["Time"],dict["Room"]))
-                #result += dict["Leacture"] + "老師開的" + dict["Course"] + "課程,每週"
-                #result += dict["Time"] + "於" + dict["Room"] + "上課<br>"
+            result += dict["Leacture"] + "老師開的" + dict["Course"] + "課程,每週"
+            result += dict["Time"] + "於" + dict["Room"] + "上課<br>"
 
         if result =="":
             result="sorry...."
