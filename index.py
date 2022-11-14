@@ -28,7 +28,7 @@ def account():
         result = ""
         for doc in docs:
             dict = doc.to_dict()
-           # if cond in dict["Course"] and cond1 in dict["Leacture"]:
+            if cond in dict["Course"] and cond1 in dict["Leacture"]:
                 #print("{}老師開的{}課程,每週{}於{}上課".format(dict["Leacture"], dict["Course"],  dict["Time"],dict["Room"]))
             result += dict["Leacture"] + "老師開的" + dict["Course"] + "課程,每週"
             result += dict["Time"] + "於" + dict["Room"] + "上課<br>"
